@@ -1,0 +1,22 @@
+    #include <bits/stdc++.h>
+    using namespace std;
+     
+    int main(){
+        
+        unordered_set<char> vowels = {'a','e','i','o','u','y',
+                                     'A','E','I','O','U','Y'};
+     
+        string input;
+        cin >> input;
+     
+        string result = "";
+        for(char ch : input){
+            if(vowels.find(ch) == vowels.end()) { 
+                result += '.';                      
+                result += tolower(ch);               
+            }
+        }
+     
+        cout << result << endl;
+        return 0;
+    }
