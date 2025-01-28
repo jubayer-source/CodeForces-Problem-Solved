@@ -1,19 +1,20 @@
 //B. Normal Problem
 //https://codeforces.com/contest/2044/problem/B
 
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    int t;
+    int t; // Number of test cases
     cin >> t;
 
     while (t--) {
         string a, b = "";
         cin >> a;
 
-        for (char c : a) {
+        // Traverse the string in reverse to mirror it
+        for (int i = a.length() - 1; i >= 0; i--) {
+            char c = a[i];
             if (c == 'p') {
                 b += 'q';
             } else if (c == 'q') {
