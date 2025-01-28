@@ -1,0 +1,30 @@
+//B. Normal Problem
+//https://codeforces.com/contest/2044/problem/B
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        string a, b = "";
+        cin >> a;
+
+        for (char c : a) {
+            if (c == 'p') {
+                b += 'q';
+            } else if (c == 'q') {
+                b += 'p';
+            } else if (c == 'w') {
+                b += 'w';
+            }
+        }
+
+        cout << b << endl;
+    }
+
+    return 0;
+}
